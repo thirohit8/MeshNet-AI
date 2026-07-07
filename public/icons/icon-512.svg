@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+  <rect width="512" height="512" rx="92" fill="#0f172a"/>
+  <polygon points="377.9,185.6 377.9,326.4 256.0,396.8 134.1,326.4 134.1,185.6 256.0,115.2" fill="none" stroke="#3b82f6" stroke-width="12.8"/>
+  <line x1="377.9" y1="185.6" x2="134.1" y2="326.4" stroke="#60a5fa" stroke-width="12.8"/><line x1="377.9" y1="326.4" x2="134.1" y2="185.6" stroke="#60a5fa" stroke-width="12.8"/><line x1="256.0" y1="396.8" x2="256.0" y2="115.2" stroke="#60a5fa" stroke-width="12.8"/>
+  <circle cx="377.9" cy="185.6" r="23.0" fill="#93c5fd"/><circle cx="377.9" cy="326.4" r="23.0" fill="#93c5fd"/><circle cx="256.0" cy="396.8" r="23.0" fill="#93c5fd"/><circle cx="134.1" cy="326.4" r="23.0" fill="#93c5fd"/><circle cx="134.1" cy="185.6" r="23.0" fill="#93c5fd"/><circle cx="256.0" cy="115.2" r="23.0" fill="#93c5fd"/>
+  <text x="256" y="291.84000000000003" text-anchor="middle" font-family="system-ui,sans-serif" font-size="92" font-weight="700" fill="#f1f5f9">MN</text>
+</svg>

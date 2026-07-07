@@ -1,0 +1,197 @@
+{
+  "policies": [
+    {
+      "id": "659c323b-5503-469f-af2d-33fcfe11e31a",
+      "type": "access",
+      "roles": [
+        {
+          "role_id": "crn:v1:bluemix:public:iam::::role:Operator",
+          "display_name": "Operator",
+          "description": "As an operator, you can perform platform actions required to configure and operate service instances, such as viewing a service's dashboard.",
+          "actions": [
+            {
+              "id": "cloudantnosqldb.activity-tracker-event-types.read",
+              "displayName": "Access list of configured activity tracker event types for a service instance",
+              "description": "Access list of configured activity tracker event types for a service instance"
+            },
+            {
+              "id": "cloudantnosqldb.activity-tracker-event-types.write",
+              "displayName": "Update list of configured activity tracker event types for a service instance",
+              "description": "Update list of configured activity tracker event types for a service instance"
+            },
+            {
+              "id": "cloudantnosqldb.sapi.userinfo",
+              "displayName": "Retrieve basic user infomation for this user",
+              "description": "Retrieve basic user infomation for this user"
+            },
+            {
+              "id": "cloudantnosqldb.sapi.userplan",
+              "displayName": "Retrieve and update instance plan settings",
+              "description": "Retrieve and update instance plan settings"
+            },
+            {
+              "id": "cloudantnosqldb.sapi.usage-data-volume",
+              "displayName": "View instance data usage",
+              "description": "View instance data usage"
+            },
+            {
+              "id": "cloudantnosqldb.capacity-throughput.read",
+              "displayName": "Read current provisioned throughput",
+              "description": "Read current provisioned throughput"
+            },
+            {
+              "id": "global-search-tagging.resource.read",
+              "displayName": "Find cloud resources",
+              "description": "The ability to find the resource using Global Search and Tagging search API"
+            },
+            {
+              "id": "cbr.rule.read",
+              "displayName": "Context-based Restrictions Rule Read",
+              "description": "The ability to see rules."
+            },
+            {
+              "id": "iam.policy.read",
+              "displayName": "IAM Policy Read",
+              "description": "The ability to see policies."
+            },
+            {
+              "id": "resource-controller.broker.update",
+              "displayName": "Resource Broker Update",
+              "description": "The ability to update or edit existing brokers."
+            },
+            {
+              "id": "resource-controller.broker.retrieve",
+              "displayName": "Resource Broker Retrieve",
+              "description": "The ability to see brokers."
+            },
+            {
+              "id": "resource-controller.alias.create",
+              "displayName": "Resource Alias Create",
+              "description": "The ability to create aliases."
+            },
+            {
+              "id": "resource-controller.alias.delete",
+              "displayName": "Resource Alias Delete",
+              "description": "The ability to delete existing aliases."
+            },
+            {
+              "id": "resource-controller.binding.create",
+              "displayName": "Resource Binding Create",
+              "description": "The ability to create bindings."
+            },
+            {
+              "id": "resource-controller.binding.delete",
+              "displayName": "Resource Binding Delete",
+              "description": "The ability to delete existing bindings."
+            },
+            {
+              "id": "resource-controller.key.create",
+              "displayName": "Resource Key Create",
+              "description": "The ability to create keys."
+            },
+            {
+              "id": "resource-controller.key.delete",
+              "displayName": "Resource Key Delete",
+              "description": "The ability to delete existing keys."
+            },
+            {
+              "id": "resource-controller.instance.update",
+              "displayName": "Resource Instance Update",
+              "description": "The ability to update or edit existing instances."
+            },
+            {
+              "id": "resource-controller.alias.update",
+              "displayName": "Resource Alias Update ",
+              "description": "The ability to update or edit existing aliases."
+            },
+            {
+              "id": "resource-controller.binding.update",
+              "displayName": "Resource Binding Update",
+              "description": "The ability to update or edit existing bindings."
+            },
+            {
+              "id": "resource-controller.key.update",
+              "displayName": "Resource Key Update",
+              "description": "The ability to update or edit existing keys."
+            },
+            {
+              "id": "resource-controller.instance.retrieve",
+              "displayName": "Resource Instance Retrieve",
+              "description": "The ability to see instances."
+            },
+            {
+              "id": "resource-controller.alias.retrieve",
+              "displayName": "Resource Alias Retrieve",
+              "description": "The ability to see aliases."
+            },
+            {
+              "id": "resource-controller.binding.retrieve",
+              "displayName": "Resource Binding Retrieve",
+              "description": "The ability to see bindings."
+            },
+            {
+              "id": "resource-controller.key.retrieve",
+              "displayName": "Resource Key Retrieve",
+              "description": "The ability to retrieve keys."
+            },
+            {
+              "id": "resource-controller.quota.retrieve",
+              "displayName": "Quota Definitions Retrieve",
+              "description": "The ability to see quota definitions."
+            },
+            {
+              "id": "resource-controller.group.retrieve",
+              "displayName": "Resource Group Retrieve",
+              "description": "The ability to see resource groups."
+            },
+            {
+              "id": "resource-controller.group.update",
+              "displayName": "Resource Group Update",
+              "description": "The ability to update or edit existing resource groups."
+            },
+            {
+              "id": "resource-controller.subscription.retrieve",
+              "displayName": "Resource Subscription Retrieve",
+              "description": "The ability to see subscription resources."
+            }
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "attributes": [
+            {
+              "name": "accountId",
+              "value": "f236c220abcd4d678a88dc512bc5c448",
+              "operator": "stringEquals"
+            },
+            {
+              "name": "serviceName",
+              "value": "cloudantnosqldb",
+              "operator": "stringEquals"
+            }
+          ]
+        }
+      ],
+      "href": "https://iam.cloud.ibm.com/v1/policies/659c323b-5503-469f-af2d-33fcfe11e31a",
+      "created_at": "2026-07-04T07:10:54.662Z",
+      "created_by_id": "IBMid-691001PM8I",
+      "last_modified_at": "2026-07-04T07:10:54.662Z",
+      "last_modified_by_id": "IBMid-691001PM8I",
+      "state": "active"
+    }
+  ],
+  "groups": [
+    {
+      "id": "AccessGroupId-PublicAccess",
+      "name": "Public Access",
+      "description": "This group includes all users and service IDs by default. All group members, including unauthenticated users, are given public access to any resources that are defined in the policies for the group.",
+      "created_at": "2019-02-23T12:00:00Z",
+      "created_by_id": "iam-ServiceId-bf540d3e-02b4-4c74-9b00-267936f4c009",
+      "last_modified_at": "",
+      "last_modified_by_id": "",
+      "href": "https://iam.cloud.ibm.com/v2/groups/AccessGroupId-PublicAccess",
+      "membership_type": "static"
+    }
+  ]
+}

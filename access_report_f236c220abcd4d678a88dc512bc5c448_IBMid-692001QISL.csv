@@ -1,0 +1,16 @@
+Policy ID,Subject ID,Resource,Roles,Actions
+f704608a-737f-497f-80ba-8b9fcddf98eb,IBMid-692001QISL,"accountId=f236c220abcd4d678a88dc512bc5c448
+serviceName=cloudantnosqldb",crn:v1:bluemix:public:cloudantnosqldb::::serviceRole:Monitor,"cloudantnosqldb.account-active-tasks.read
+cloudantnosqldb.account-all-dbs.read
+cloudantnosqldb.account-capacity-dbs.read
+cloudantnosqldb.account-current-dbs.read
+cloudantnosqldb.account-dbs-info.read
+cloudantnosqldb.account-deleted-dbs.list
+cloudantnosqldb.account-meta-info.read
+cloudantnosqldb.account-up.read
+cloudantnosqldb.capacity-throughput.read
+cloudantnosqldb.current-throughput.read
+cloudantnosqldb.database-info.read
+cloudantnosqldb.database-shards.read
+cloudantnosqldb.replication-scheduler.read
+cloudantnosqldb.sapi.usage-data-volume"

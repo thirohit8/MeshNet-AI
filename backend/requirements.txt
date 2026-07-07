@@ -1,0 +1,42 @@
+# MeshNet AI — Python Network Brain
+# Pinned dependency manifest for the mesh simulation and security layer.
+#
+# ── Install ───────────────────────────────────────────────────────────────────
+#   pip install -r requirements.txt
+#
+# ── Upgrade to latest compatible releases ─────────────────────────────────────
+#   pip install -r requirements.txt --upgrade
+#
+# ── Re-pin after an upgrade ───────────────────────────────────────────────────
+#   pip freeze | grep -E "networkx|cryptography|requests|certifi|charset|idna|urllib3|cffi|pycparser|fastapi|uvicorn|pydantic|psycopg2|starlette|anyio|sniffio|h11|typing_extensions" > requirements.txt
+#
+# Python 3.10+ required (3.13.x tested).
+# ─────────────────────────────────────────────────────────────────────────────
+
+# ── Layer 2 / Layer 3: Graph simulation & routing ─────────────────────────────
+networkx==3.6.1          # Graph data structures & mesh topology algorithms (AODV routing)
+cryptography==49.0.0     # AES-GCM encryption, Ed25519 node identity, HMAC auth
+
+# ── Layer 2 / Layer 3: FastAPI routing service (api_server.py) ────────────────
+fastapi==0.115.12        # ASGI web framework — exposes /api/route to Express backend
+uvicorn[standard]==0.34.3  # ASGI server — run with: uvicorn api_server:app --port 5050
+pydantic==2.11.4         # Request / response validation (FastAPI dependency)
+
+# ── Layer 4: PostgreSQL / Supabase connectivity ───────────────────────────────
+psycopg2-binary==2.9.10  # PostgreSQL adapter — used when SUPABASE_DB_URL is set
+
+# ── HTTP client (Cloudant REST + backend heartbeats) ─────────────────────────
+requests==2.34.2         # HTTP client — Cloudant REST API & backend health checks
+
+# ── Transitive dependencies (pinned for reproducibility) ─────────────────────
+anyio==4.9.0             # Async I/O abstraction (uvicorn / FastAPI)
+certifi==2026.6.17       # Mozilla CA bundle (requests TLS)
+cffi==2.0.0              # C Foreign Function Interface (cryptography native layer)
+charset-normalizer==3.4.7  # Character encoding detection (requests)
+h11==0.16.0              # HTTP/1.1 implementation (uvicorn)
+idna==3.18               # Internationalized domain names (requests)
+pycparser==3.0           # C parser for cffi
+sniffio==1.3.1           # Async library detection (anyio)
+starlette==0.46.2        # ASGI toolkit (FastAPI dependency)
+typing_extensions==4.14.0  # Backports for older Python type hints
+urllib3==2.7.0           # HTTP connection pooling (requests)

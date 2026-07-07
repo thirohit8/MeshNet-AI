@@ -1,0 +1,10 @@
+# Local environment variables (never commit)
+.env.local
+.env*.local
+
+node_modules/
+dist/
+
+.buildozer/
+bin/
+*.deb

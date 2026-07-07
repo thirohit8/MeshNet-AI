@@ -1,0 +1,21 @@
+{
+  "name": "meshnet-database",
+  "version": "1.0.0",
+  "description": "MeshNet AI — SQLite migrations and seeds",
+  "private": true,
+  "scripts": {
+    "migrate":       "ts-node migrations/run.ts",
+    "seed":          "ts-node seeds/run.ts",
+    "seed:mesh":     "ts-node seeds/seed_mesh_nodes.ts",
+    "setup":         "ts-node migrations/run.ts && ts-node seeds/run.ts && ts-node seeds/seed_mesh_nodes.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.11.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/node": "^20.14.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

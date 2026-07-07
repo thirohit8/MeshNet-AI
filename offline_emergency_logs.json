@@ -1,0 +1,28 @@
+[
+    {
+        "status": "SECURED",
+        "disaster_scenario": "Earthquake",
+        "operation_range_limit_km": 70,
+        "optimized_hops": [
+            "Node_001",
+            "Node_002",
+            "Node_003"
+        ],
+        "hop_count": 2,
+        "routing_handshake_token": "TUVTSC1FYXJ0aHF1YWtlLTE2NDk1NQ==",
+        "timestamp": "2026-07-04 16:49:55"
+    },
+    {
+        "status": "SECURED",
+        "disaster_scenario": "Earthquake",
+        "operation_range_limit_km": 70,
+        "optimized_hops": [
+            "Node_001",
+            "Node_002",
+            "Node_003"
+        ],
+        "hop_count": 2,
+        "routing_handshake_token": "TUVTSC1FYXJ0aHF1YWtlLTE2NTY0NQ==",
+        "timestamp": "2026-07-04 16:56:45"
+    }
+]

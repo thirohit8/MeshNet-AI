@@ -1,0 +1,38 @@
+[
+  {
+    "id": "alert-001",
+    "type": "medical",
+    "severity": "high",
+    "from_node_id": "med-01",
+    "from_label": "MED·01",
+    "message": "Need insulin supplies at sector 4B. 2 patients.",
+    "lat": 37.7740,
+    "lng": -122.4195,
+    "ttl": 7,
+    "acknowledged": 0
+  },
+  {
+    "id": "alert-002",
+    "type": "hazard",
+    "severity": "high",
+    "from_node_id": "cmd-hq",
+    "from_label": "CMD·HQ",
+    "message": "Gas leak reported near District 5. Evacuate immediately.",
+    "lat": 37.7749,
+    "lng": -122.4194,
+    "ttl": 7,
+    "acknowledged": 0
+  },
+  {
+    "id": "alert-003",
+    "type": "safe",
+    "severity": "low",
+    "from_node_id": "ramos-phone",
+    "from_label": "Ramos",
+    "message": "Safe zone confirmed at Oak Ave shelter. Capacity: 80.",
+    "lat": 37.7751,
+    "lng": -122.4180,
+    "ttl": 5,
+    "acknowledged": 1
+  }
+]

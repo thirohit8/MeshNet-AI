@@ -1,0 +1,104 @@
+#:kivy 2.3.0
+# =============================================================================
+# MeshNet-AI — meshnet.kv
+# =============================================================================
+# Declarative KV language supplement to ui.py.
+#
+# The root widget (MeshNetRootWidget) is fully constructed in Python code
+# inside ui.py using programmatic widget composition.  This KV file provides:
+#   • Global app-level style rules applied to built-in widget classes.
+#   • Custom style rules for named widget classes defined in ui.py.
+#   • Font and colour tokens reused throughout the layout.
+#
+# NOTE: The KV <ClassName@BaseClass> rule-based approach is used for
+#       styling only.  Structural layout is owned by ui.py to keep the
+#       complex multi-panel composition traceable in one place.
+# =============================================================================
+
+#:import MDApp       kivymd.app.MDApp
+#:import dp          kivy.metrics.dp
+#:import sp          kivy.metrics.sp
+
+
+# ─── Global window background ─────────────────────────────────────────────────
+
+<Widget>:
+    # Gives every widget the dark-theme background by default.
+    # Individual panels override this via MDCard's md_bg_color.
+
+
+# ─── Typography helpers ────────────────────────────────────────────────────────
+
+<MDLabel>:
+    markup: True                    # Allow [b]…[/b] and [color=…]…[/color]
+
+
+# ─── LeftPanel styling ────────────────────────────────────────────────────────
+# Targets the Python class LeftPanel (subclass of MDCard).
+# Provides the dark surface colour and consistent border radius.
+
+<LeftPanel>:
+    md_bg_color: app.theme_cls.bg_dark
+    radius: [12, 12, 12, 12]
+    elevation: 6
+
+
+# ─── RightPanel styling ───────────────────────────────────────────────────────
+
+<RightPanel>:
+    md_bg_color: app.theme_cls.bg_darkest if hasattr(app.theme_cls, 'bg_darkest') else app.theme_cls.bg_dark
+    radius: [12, 12, 12, 12]
+    elevation: 6
+
+
+# ─── PeerListItem styling ─────────────────────────────────────────────────────
+# TwoLineIconListItem with colour-coded secondary text.
+
+<PeerListItem>:
+    theme_text_color: "Primary"
+    _no_ripple_effect: False
+
+
+# ─── HopLogView styling ───────────────────────────────────────────────────────
+
+<HopLogView>:
+    bar_width: dp(4)
+    bar_color: app.theme_cls.primary_color
+    scroll_type: ['bars', 'content']
+    effect_cls: "ScrollEffect"
+
+
+# ─── SOS button styling (applied via id in Python) ────────────────────────────
+# Kivy KV rules cannot directly target a widget by Python variable name,
+# so we apply a named class rule here that ui.py references explicitly.
+
+<MDRaisedButton>:
+    _radius: dp(8)
+    elevation: 4
+
+
+# ─── Snackbar styling ─────────────────────────────────────────────────────────
+
+<Snackbar>:
+    # Ensure snackbar sits above the bottom of the screen
+    pos_hint: {"center_x": .5, "y": .02}
+    size_hint_x: .9
+
+
+# ─── MapView tile-loading indicator ───────────────────────────────────────────
+# When kivy_garden.mapview is present, style the loading overlay spinner.
+
+# <MapView>:
+#     loading_indicator: "loading"   # referenced in MapView internals
+
+
+# ─── Root widget background ────────────────────────────────────────────────────
+
+<MeshNetRootWidget>:
+    md_bg_color: app.theme_cls.bg_dark if hasattr(app, 'theme_cls') else (0.12, 0.12, 0.14, 1)
+    canvas.before:
+        Color:
+            rgba: (0.10, 0.10, 0.13, 1)
+        Rectangle:
+            pos:  self.pos
+            size: self.size

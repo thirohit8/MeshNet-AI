@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cmd-hq",
+    "label": "CMD·HQ",
+    "name": "ThinkPad X1 Carbon",
+    "device": "laptop",
+    "role": "relay",
+    "signal": 100,
+    "battery_percentage": 82,
+    "bluetooth_status": 1,
+    "os": "Ubuntu 24.04",
+    "lat": 37.7749,
+    "lng": -122.4194
+  },
+  {
+    "id": "ramos-phone",
+    "label": "Ramos",
+    "name": "iPhone 15 Pro",
+    "device": "smartphone",
+    "role": "relay",
+    "signal": 87,
+    "battery_percentage": 67,
+    "bluetooth_status": 1,
+    "os": "iOS 17.5",
+    "lat": 37.7751,
+    "lng": -122.4180
+  },
+  {
+    "id": "chen-laptop",
+    "label": "Chen",
+    "name": "MacBook Air M3",
+    "device": "laptop",
+    "role": "relay",
+    "signal": 72,
+    "battery_percentage": 91,
+    "bluetooth_status": 0,
+    "os": "macOS Sonoma 14",
+    "lat": 37.7755,
+    "lng": -122.4210
+  },
+  {
+    "id": "med-01",
+    "label": "MED·01",
+    "name": "Samsung Galaxy S24",
+    "device": "smartphone",
+    "role": "peer",
+    "signal": 91,
+    "battery_percentage": 55,
+    "bluetooth_status": 1,
+    "os": "Android 14",
+    "lat": 37.7740,
+    "lng": -122.4195
+  },
+  {
+    "id": "torres-phone",
+    "label": "Torres",
+    "name": "Google Pixel 8",
+    "device": "smartphone",
+    "role": "peer",
+    "signal": 64,
+    "battery_percentage": 38,
+    "bluetooth_status": 0,
+    "os": "Android 14",
+    "lat": 37.7742,
+    "lng": -122.4175
+  }
+]

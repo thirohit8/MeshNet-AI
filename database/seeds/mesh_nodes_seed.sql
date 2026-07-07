@@ -1,0 +1,148 @@
+-- mesh_nodes_seed.sql
+-- MeshNet AI — 100-row mock dataset for the mesh_nodes virtual environment
+--
+-- ── Usage ──────────────────────────────────────────────────────────────────
+-- Option A — Supabase SQL Editor (recommended for first-time setup):
+--   Dashboard → SQL Editor → New query → paste this entire file → Run
+--
+-- Option B — psql:
+--   psql $SUPABASE_DB_URL -f database/seeds/mesh_nodes_seed.sql
+--
+-- Safe to re-run: uses INSERT ... ON CONFLICT DO UPDATE (upsert).
+-- ──────────────────────────────────────────────────────────────────────────
+--
+-- Virtual environment: 100 citizens spread within 1 km of Manila
+-- Base coords: 14.5995°N, 120.9842°E  (Barangay 892)
+-- Node #100  : is_rescue_team = TRUE  — rescue camp command portal
+-- ──────────────────────────────────────────────────────────────────────────
+
+-- Run migration 005 first if the table does not yet exist:
+--   psql $SUPABASE_DB_URL -f database/migrations/005_mesh_nodes.sql
+
+INSERT INTO mesh_nodes
+  (node_id, citizen_name, latitude, longitude, battery_percentage, bluetooth_status, is_rescue_team, signal, device, role, os)
+VALUES
+  (1,'James Santos',14.5995,120.9878,51,true,false,49,'laptop','peer','Android 13'),
+  (2,'Maria Reyes',14.599783,120.988691,88,true,false,41,'smartphone','peer','iOS 17.5'),
+  (3,'Jose Cruz',14.600177,120.989557,25,false,false,94,'laptop','peer','iOS 16.7'),
+  (4,'Ana Bautista',14.600681,120.990388,62,true,false,86,'smartphone','peer','Windows 11'),
+  (5,'Juan Ocampo',14.601291,120.991174,99,true,false,78,'laptop','relay','macOS Sonoma 14'),
+  (6,'Rosa Garcia',14.602003,120.991904,36,false,false,70,'smartphone','peer','Ubuntu 24.04'),
+  (7,'Miguel Lim',14.600494,120.98671,73,true,false,62,'laptop','peer','Android 14'),
+  (8,'Elena Tan',14.601033,120.987457,10,true,false,54,'smartphone','peer','Android 13'),
+  (9,'Carlos Dela Cruz',14.601668,120.988143,47,false,false,46,'laptop','peer','iOS 17.5'),
+  (10,'Sofia Lopez',14.602393,120.988759,84,true,false,99,'smartphone','relay','iOS 16.7'),
+  (11,'Antonio Mendoza',14.603203,120.989297,21,true,false,91,'laptop','peer','Windows 11'),
+  (12,'Isabella Ramos',14.604089,120.989748,58,false,false,83,'smartphone','peer','macOS Sonoma 14'),
+  (13,'Rafael Torres',14.605045,120.990105,95,true,false,75,'laptop','peer','Ubuntu 24.04'),
+  (14,'Carmen Flores',14.601468,120.986048,32,true,false,67,'smartphone','peer','Android 14'),
+  (15,'Luis Villanueva',14.602274,120.986495,69,false,false,59,'laptop','relay','Android 13'),
+  (16,'Valentina Castro',14.603141,120.986845,6,true,false,51,'smartphone','peer','iOS 17.5'),
+  (17,'Marco Aquino',14.604059,120.987093,43,true,false,43,'laptop','peer','iOS 16.7'),
+  (18,'Gabriela Domingo',14.605021,120.987235,80,false,false,96,'smartphone','peer','Windows 11'),
+  (19,'Diego Pascual',14.606015,120.987266,17,true,false,88,'laptop','peer','macOS Sonoma 14'),
+  (20,'Lucia Gutierrez',14.607031,120.987182,54,true,false,80,'smartphone','relay','Ubuntu 24.04'),
+  (21,'Pedro Salazar',14.602068,120.985034,91,false,false,72,'laptop','peer','Android 14'),
+  (22,'Camila Rivera',14.602987,120.985095,28,true,false,64,'smartphone','peer','Android 13'),
+  (23,'Roberto Navarro',14.60392,120.985043,65,true,false,56,'laptop','peer','iOS 17.5'),
+  (24,'Natalia Morales',14.604857,120.984877,2,false,false,48,'smartphone','peer','iOS 16.7'),
+  (25,'Fernando Jimenez',14.605788,120.984596,39,true,false,40,'laptop','relay','Windows 11'),
+  (26,'Andrea Herrera',14.6067,120.9842,76,true,false,93,'smartphone','peer','macOS Sonoma 14'),
+  (27,'Alejandro Vega',14.607584,120.983691,13,false,false,85,'laptop','peer','Ubuntu 24.04'),
+  (28,'Daniela Rojas',14.602179,120.983862,50,true,false,77,'smartphone','peer','Android 14'),
+  (29,'Ricardo Aguilar',14.603036,120.983525,87,true,false,69,'laptop','peer','Android 13'),
+  (30,'Paola Molina',14.603859,120.983081,24,false,false,61,'smartphone','relay','iOS 17.5'),
+  (31,'Eduardo Silva',14.604636,120.982531,61,true,false,53,'laptop','peer','iOS 16.7'),
+  (32,'Fernanda Ortega',14.605358,120.981881,98,true,false,45,'smartphone','peer','Windows 11'),
+  (33,'Pablo Cardenas',14.606015,120.981134,35,false,false,98,'laptop','peer','macOS Sonoma 14'),
+  (34,'Claudia Diaz',14.606598,120.980298,72,true,false,90,'smartphone','peer','Ubuntu 24.04'),
+  (35,'Santiago Gonzalez',14.60178,120.982753,9,true,false,82,'laptop','relay','Android 14'),
+  (36,'Patricia Romero',14.602412,120.982084,46,false,false,74,'smartphone','peer','Android 13'),
+  (37,'Victor Soto',14.602967,120.981332,83,true,false,66,'laptop','peer','iOS 17.5'),
+  (38,'Monica Ruiz',14.603436,120.980503,20,true,false,58,'smartphone','peer','iOS 16.7'),
+  (39,'Oscar Suarez',14.603813,120.979607,57,false,false,50,'laptop','peer','Windows 11'),
+  (40,'Laura Medina',14.604089,120.978652,94,true,false,42,'smartphone','relay','macOS Sonoma 14'),
+  (41,'Andres Fuentes',14.604261,120.977647,31,true,false,95,'laptop','peer','Ubuntu 24.04'),
+  (42,'Teresa Vargas',14.600947,120.98192,68,false,false,87,'smartphone','peer','Android 14'),
+  (43,'Ernesto Rios',14.601234,120.981045,5,true,false,79,'laptop','peer','Android 13'),
+  (44,'Gloria Pena',14.601416,120.980128,42,true,false,71,'smartphone','peer','iOS 17.5'),
+  (45,'Ramon Espinoza',14.601488,120.979179,79,false,false,63,'laptop','relay','iOS 16.7'),
+  (46,'Esperanza Ramirez',14.601447,120.978208,16,true,false,55,'smartphone','peer','Windows 11'),
+  (47,'Hector Miranda',14.601291,120.977226,53,true,false,47,'laptop','peer','macOS Sonoma 14'),
+  (48,'Concepcion Guerrero',14.601018,120.976243,90,false,false,100,'smartphone','peer','Ubuntu 24.04'),
+  (49,'Felipe Santiago',14.599838,120.981521,27,true,false,92,'laptop','peer','Android 14'),
+  (50,'Angela Delgado',14.599726,120.980607,64,true,false,84,'smartphone','relay','Android 13'),
+  (51,'Leonardo Serrano',14.5995,120.9797,1,false,false,76,'laptop','peer','iOS 17.5'),
+  (52,'Beatriz Blanco',14.599161,120.978811,38,true,false,68,'smartphone','peer','iOS 16.7'),
+  (53,'Mauricio Cabrera',14.59871,120.97795,75,true,false,60,'laptop','peer','Windows 11'),
+  (54,'Irene Ibarra',14.598151,120.977128,12,false,false,52,'smartphone','peer','macOS Sonoma 14'),
+  (55,'Ivan Perez',14.597486,120.976354,49,true,false,44,'laptop','relay','Ubuntu 24.04'),
+  (56,'Lorena Nava',14.598666,120.981632,86,true,false,97,'smartphone','peer','Android 14'),
+  (57,'Alfredo Alvarado',14.598175,120.980853,23,false,false,89,'laptop','peer','Android 13'),
+  (58,'Veronica Correa',14.597584,120.980128,60,true,false,81,'smartphone','peer','iOS 17.5'),
+  (59,'Julio Arias',14.596899,120.979468,97,true,false,73,'laptop','peer','iOS 16.7'),
+  (60,'Silvia Leon',14.596124,120.978881,34,false,false,65,'smartphone','relay','Windows 11'),
+  (61,'Edgar Pacheco',14.595268,120.978375,71,true,false,57,'laptop','peer','macOS Sonoma 14'),
+  (62,'Pilar Montes',14.594337,120.977959,8,true,false,49,'smartphone','peer','Ubuntu 24.04'),
+  (63,'Martin Escobar',14.597652,120.982232,45,false,false,41,'laptop','peer','Android 14'),
+  (64,'Marta Avila',14.596876,120.981736,82,true,false,94,'smartphone','peer','Android 13'),
+  (65,'Nicolas Dominguez',14.596033,120.981332,19,true,false,86,'laptop','relay','iOS 17.5'),
+  (66,'Carmen Sandoval',14.595131,120.981026,56,false,false,78,'smartphone','peer','iOS 16.7'),
+  (67,'Hugo Zamora',14.594181,120.980824,93,true,false,70,'laptop','peer','Windows 11'),
+  (68,'Cristina Montoya',14.593191,120.980731,30,true,false,62,'smartphone','peer','macOS Sonoma 14'),
+  (69,'Alberto Estrada',14.592171,120.980751,67,false,false,54,'laptop','peer','Ubuntu 24.04'),
+  (70,'Rosario Nunez',14.59699,120.983206,4,true,false,46,'smartphone','relay','Android 14'),
+  (71,'Emilio Trujillo',14.596076,120.983088,41,true,false,99,'laptop','peer','Android 13'),
+  (72,'Dolores Parra',14.595141,120.983081,78,false,false,91,'smartphone','peer','iOS 17.5'),
+  (73,'Raul Padilla',14.594196,120.983188,15,true,false,83,'laptop','peer','iOS 16.7'),
+  (74,'Amparo Figueroa',14.59325,120.98341,52,true,false,75,'smartphone','peer','Windows 11'),
+  (75,'Manuel Cano',14.592314,120.983748,89,false,false,67,'laptop','relay','macOS Sonoma 14'),
+  (76,'Josefa Castillo',14.5914,120.9842,26,true,false,59,'smartphone','peer','Ubuntu 24.04'),
+  (77,'Enrique Cervantes',14.596805,120.98437,63,true,false,51,'laptop','peer','Android 14'),
+  (78,'Milagros Rangel',14.595928,120.984651,100,false,false,43,'smartphone','peer','Android 13'),
+  (79,'Sergio Marin',14.59508,120.985043,37,true,false,96,'laptop','peer','iOS 17.5'),
+  (80,'Natividad Mora',14.59427,120.985543,74,true,false,88,'smartphone','relay','iOS 16.7'),
+  (81,'Arturo Saavedra',14.593508,120.986147,11,false,false,80,'laptop','peer','Windows 11'),
+  (82,'Remedios Franco',14.592806,120.98685,48,true,false,72,'smartphone','peer','macOS Sonoma 14'),
+  (83,'Bernardo Valenzuela',14.592171,120.987649,85,true,false,64,'laptop','peer','Ubuntu 24.04'),
+  (84,'Consuelo Calderon',14.597134,120.985501,22,false,false,56,'smartphone','peer','Android 14'),
+  (85,'Cesar Duarte',14.59646,120.986129,59,true,false,48,'laptop','relay','Android 13'),
+  (86,'Asuncion Contreras',14.595859,120.986845,96,true,false,40,'smartphone','peer','iOS 17.5'),
+  (87,'Leandro Andrade',14.595339,120.987642,33,false,false,93,'laptop','peer','iOS 16.7'),
+  (88,'Soledad Velazquez',14.594907,120.988513,70,true,false,85,'smartphone','peer','Windows 11'),
+  (89,'Gerardo Maldonado',14.594571,120.989449,7,true,false,77,'laptop','peer','macOS Sonoma 14'),
+  (90,'Purificacion Ibana',14.594337,120.990441,44,false,false,69,'smartphone','relay','Ubuntu 24.04'),
+  (91,'Ignacio Adriano',14.597913,120.986384,81,true,false,61,'laptop','peer','Android 14'),
+  (92,'Presentacion Batungbakal',14.597571,120.98724,18,true,false,53,'smartphone','peer','Android 13'),
+  (93,'Rodrigo Macapagal',14.597332,120.988143,55,false,false,45,'laptop','peer','iOS 17.5'),
+  (94,'Visitacion Enriquez',14.597201,120.989086,92,true,false,98,'smartphone','peer','iOS 16.7'),
+  (95,'Aurelio Evangelista',14.597181,120.990058,29,true,false,90,'laptop','relay','Windows 11'),
+  (96,'Wenceslao Ilagan',14.597275,120.991048,66,false,false,82,'smartphone','peer','macOS Sonoma 14'),
+  (97,'James Manalo',14.597486,120.992046,3,true,false,74,'laptop','peer','Ubuntu 24.04'),
+  (98,'Maria Poblete',14.598994,120.986852,40,true,false,66,'smartphone','peer','Android 14'),
+  (99,'Jose Santos',14.599049,120.987772,77,false,false,58,'laptop','peer','Android 13'),
+  (100,'Ana Reyes',14.599217,120.988691,14,true,true,50,'smartphone','relay','iOS 17.5')
+ON CONFLICT (node_id) DO UPDATE SET
+  citizen_name       = EXCLUDED.citizen_name,
+  latitude           = EXCLUDED.latitude,
+  longitude          = EXCLUDED.longitude,
+  battery_percentage = EXCLUDED.battery_percentage,
+  bluetooth_status   = EXCLUDED.bluetooth_status,
+  is_rescue_team     = EXCLUDED.is_rescue_team,
+  signal             = EXCLUDED.signal,
+  device             = EXCLUDED.device,
+  role               = EXCLUDED.role,
+  os                 = EXCLUDED.os;
+
+-- Verify the insert
+SELECT
+  COUNT(*)                                     AS total_nodes,
+  COUNT(*) FILTER (WHERE bluetooth_status)     AS ble_active,
+  COUNT(*) FILTER (WHERE is_rescue_team)       AS rescue_portals,
+  COUNT(*) FILTER (WHERE role = 'relay')       AS relay_nodes,
+  ROUND(AVG(battery_percentage)::NUMERIC, 1)  AS avg_battery,
+  ROUND(MIN(latitude)::NUMERIC, 6)            AS lat_min,
+  ROUND(MAX(latitude)::NUMERIC, 6)            AS lat_max,
+  ROUND(MIN(longitude)::NUMERIC, 6)           AS lng_min,
+  ROUND(MAX(longitude)::NUMERIC, 6)           AS lng_max
+FROM mesh_nodes;

@@ -1,10 +1,9 @@
-# Local environment variables (never commit)
-.env.local
-.env*.local
-
+# .gitignore for MeshNet-AI cleanup
 node_modules/
 dist/
-
-.buildozer/
-bin/
-*.deb
+build/
+*.pyc
+__pycache__/
+.venv/
+.DS_Store
+*.egg-info/

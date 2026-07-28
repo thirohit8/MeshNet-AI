@@ -1,0 +1,39 @@
+name: Apply cleanup
+
+on:
+  push:
+    branches: [ 'cleanup/remove-tracked-artifacts' ]
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Remove tracked artifacts and commit
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Attempt to remove common tracked artifact directories/files if present
+          git rm -r --cached node_modules || true
+          git rm -r --cached dist || true
+          git rm -r --cached build || true
+          git rm -r --cached .venv || true
+          git rm -r --cached "*.egg-info" || true
+          git rm -r --cached "*.pyc" || true
+          git rm -r --cached __pycache__ || true
+          git rm -r --cached .DS_Store || true
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No tracked artifacts to remove."
+          else
+            git commit -m "chore: remove tracked build/dependency artifacts"
+            git push origin HEAD:cleanup/remove-tracked-artifacts
+          fi

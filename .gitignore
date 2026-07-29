@@ -1,9 +1,0 @@
-# .gitignore for MeshNet-AI cleanup
-node_modules/
-dist/
-build/
-*.pyc
-__pycache__/
-.venv/
-.DS_Store
-*.egg-info/
